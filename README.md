@@ -77,6 +77,67 @@ uvicorn app.__init__:app --host 0.0.0.0 --port 8000 --reload
 
 `Authorization: <token>`
 
+## Пути по всем веткам репозитория
+
+Ниже перечислены пути, найденные во всех ветках через анализ `app/__init__.py` и `app/endpoints/*.py`.
+
+### `UsersMicroservice` и `origin/UsersMicroservice`
+
+Префиксы:
+- `/api/users`
+- `/api/users/student`
+- `/api/users/teacher`
+- `/api/users/neutral`
+
+Пути:
+- `GET /`
+- `GET /lessons`
+- `GET /info`
+- `GET /gpa`
+- `GET /grade`
+- `GET /percentile`
+- `POST /add/custom/lesson`
+- `GET /custom/lessons`
+- `GET /groups`
+- `POST /mark`
+- `GET /student/{student_code}`
+- `GET /lessons`
+- `POST /marking/students`
+- `GET /disciplines`
+- `GET /group/{group_code}`
+- `GET /all/grades`
+- `POST /add/task`
+- `GET /lesson/{lesson_id}`
+- `GET /entrances`
+- `GET /enter/token`
+
+### `LoginMicroservice` и `origin/LoginMicroservice`
+
+Префиксы:
+- `/api/auth/admin`
+- `/api/auth/student`
+- `/api/auth/teacher`
+
+Пути:
+- `POST /login`
+- `GET /refresh`
+- `POST /reset`
+- `PUT /reset/confirm`
+
+### `entranceMicroservice` и `origin/entranceMicroservice`
+
+Префикс:
+- `/api/entrance`
+
+Пути:
+- `POST /add`
+- `POST /auditory/open`
+- `PUT /auditory/close`
+
+### `adminMicroservice`, `origin/adminMicroservice`, `main`, `origin/main`, `sdfhgsd/main`
+
+В этих ветках API-пути в формате FastAPI-декораторов (`app/endpoints/*.py`) не обнаружены.
+
 ## Документация API
 
 После запуска доступны:
